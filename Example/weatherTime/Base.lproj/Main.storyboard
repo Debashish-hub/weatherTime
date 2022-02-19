@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +18,58 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsI-iO-au5">
+                                <rect key="frame" x="26" y="20" width="323" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0o-vl-TMp">
+                                <rect key="frame" x="26" y="64" width="323" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunrise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSD-6j-hED">
+                                <rect key="frame" x="26" y="128" width="323" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunset" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kW4-JU-inc">
+                                <rect key="frame" x="26" y="182" width="323" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XsI-iO-au5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="0qd-96-1pb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XsI-iO-au5" secondAttribute="trailing" constant="10" id="64y-Gz-zUf"/>
+                            <constraint firstItem="kW4-JU-inc" firstAttribute="leading" secondItem="qSD-6j-hED" secondAttribute="leading" id="69R-BK-A1t"/>
+                            <constraint firstItem="XsI-iO-au5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="FB9-HR-0VI"/>
+                            <constraint firstItem="kW4-JU-inc" firstAttribute="trailing" secondItem="qSD-6j-hED" secondAttribute="trailing" id="FxN-bg-WJ1"/>
+                            <constraint firstItem="qSD-6j-hED" firstAttribute="trailing" secondItem="H0o-vl-TMp" secondAttribute="trailing" id="GoV-In-Icr"/>
+                            <constraint firstItem="qSD-6j-hED" firstAttribute="top" secondItem="H0o-vl-TMp" secondAttribute="bottom" constant="40" id="KOV-3C-5Q9"/>
+                            <constraint firstItem="qSD-6j-hED" firstAttribute="leading" secondItem="H0o-vl-TMp" secondAttribute="leading" id="VIl-6M-sjQ"/>
+                            <constraint firstItem="H0o-vl-TMp" firstAttribute="top" secondItem="XsI-iO-au5" secondAttribute="bottom" constant="20" id="bCq-do-Wfi"/>
+                            <constraint firstItem="kW4-JU-inc" firstAttribute="top" secondItem="qSD-6j-hED" secondAttribute="bottom" constant="30" id="gxj-lZ-Ozh"/>
+                            <constraint firstItem="H0o-vl-TMp" firstAttribute="trailing" secondItem="XsI-iO-au5" secondAttribute="trailing" id="kz2-wl-bGN"/>
+                            <constraint firstItem="H0o-vl-TMp" firstAttribute="leading" secondItem="XsI-iO-au5" secondAttribute="leading" id="sI7-pr-8g0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="XsI-iO-au5" id="XqG-xg-4mm"/>
+                        <outlet property="sunrise" destination="qSD-6j-hED" id="Uc4-Ie-Xk4"/>
+                        <outlet property="sunset" destination="kW4-JU-inc" id="jgG-Av-nAU"/>
+                        <outlet property="time" destination="H0o-vl-TMp" id="j1h-Li-b7Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="127" y="107"/>
         </scene>
     </scenes>
 </document>
